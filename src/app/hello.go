@@ -12,7 +12,7 @@ func main() {
 	// [START setting_port]
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "8081"
 		log.Printf("Defaulting to port %s", port)
 	}
 	log.Printf("Listening on port %s", port)
@@ -27,5 +27,5 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	fmt.Fprint(w, "smbang test 배포 v-6")
+	fmt.Fprint(w, "smbang test 배포 v-7")
 }
