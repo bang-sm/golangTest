@@ -11,4 +11,4 @@ COPY . ./
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o main hello.go
 EXPOSE 8080
-CMD ["/main"]
+CMD ["/app/hello"]
