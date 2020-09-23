@@ -1,9 +1,9 @@
 steps:
-    - name: 'gcr.io/cloud-builders/docker'
+    - name: 'gcr.io/cloud-builders/git'
       args:
       - 'run'
       - 'deploy'
-      - 'run1432'
+      - 'run1520'
       - '--image'
       - 'gcr.io/test-go-290301/hello'
       - '--region'
