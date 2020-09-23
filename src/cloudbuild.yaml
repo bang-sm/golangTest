@@ -1,5 +1,13 @@
 steps:
     - name: 'gcr.io/cloud-builders/docker'
-      args: 'build', '-t', 'gcr.io/test-go-290301/quickstart-image', '.'
-    images:
-    - 'gcr.io/test-go-290301/quickstart-image'
+      args:
+      - 'run'
+      - 'deploy'
+      - 'cloudrunservice'
+      - '--image'
+      - 'gcr.io/test-go-290301/hello'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
