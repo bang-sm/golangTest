@@ -1,3 +1,3 @@
-module github.com/shharn/golang-docker-tutorial
+module github.com/bang-sm/golangTest/tree/master/src/hello
 
 go 1.15

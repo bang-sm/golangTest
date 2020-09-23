@@ -1,14 +1,9 @@
-FROM golang:1.15.2
+FROM golang:1.15.2 AS build
 
-RUN mkdir /app
-RUN mkdir -p /upload
-WORKDIR /app
+WORKDIR /src/
+COPY hello.go go.* /src/
+RUN CGO_ENABLED=0 go build -o /bin/app
 
-COPY go.* ./
-RUN go mod download
-
-COPY . ./
-
-RUN CGO_ENABLED=0 GOOS=linux go build -o main hello.go
-EXPOSE 8080
-CMD ["/app/main"] 
+FROM scratch
+COPY --from=build /bin/app /bin/app
+ENTRYPOINT ["/bin/app"]
