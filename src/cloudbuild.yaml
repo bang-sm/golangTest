@@ -1,13 +1,11 @@
 steps:
-    - name: 'gcr.io/cloud-builders/docker'
+    - name: 'gcr.io/cloud-builders/gcloud'
       args:
       - 'run'
       - 'deploy'
-      - 'cloudrunservice'
+      - 'run1432'
       - '--image'
-      - 'gcr.io/test-go-290301/hello'
+      - 'gcr.io/test-go-290301g/hello'
       - '--region'
-      - 'us-central1'
       - '--platform'
       - 'managed'
-      - '--allow-unauthenticated'
