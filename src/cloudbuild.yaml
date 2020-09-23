@@ -5,7 +5,7 @@ steps:
       - 'deploy'
       - 'run1432'
       - '--image'
-      - 'gcr.io/test-go-290301g/hello'
+      - 'gcr.io/test-go-290301/hello'
       - '--region'
       - '--platform'
       - 'managed'
