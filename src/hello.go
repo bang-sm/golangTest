@@ -27,5 +27,5 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	fmt.Fprint(w, "smbang test 배포 v-4")
+	fmt.Fprint(w, "smbang test 배포 v-5")
 }
