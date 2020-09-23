@@ -1,5 +1,5 @@
 steps:
-    - name: 'gcr.io/cloud-builders/docker'
+    - name: 'gcr.io/test-go-290301/docker'
       args: [ 'build', '-t', 'gcr.io/test-go-290301/quickstart-image', '.' ]
     images:
     - 'gcr.io/test-go-290301/quickstart-image'
